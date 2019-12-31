@@ -11,7 +11,7 @@ db = SQLAlchemy(app)
 
 @app.errorhandler(404)
 def not_found(error):
-    return '404'
+    return 'Error 404'
 
 
 @app.route('/api/call', methods=['GET'])

@@ -2,6 +2,10 @@ import os
 
 DEBUG = True
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(BASE_DIR, 'app.db')
+NAME_DATABASE = 'intexsoft'
+USER_DATABASE = 'root'
+PASSWORD_DATABASE = 'mysqlpass'
+SERVER_DATABASE = 'localhost'
+SQLALCHEMY_DATABASE_URI = f'mysql+pymysql://{USER_DATABASE}:{PASSWORD_DATABASE}@{SERVER_DATABASE}/{NAME_DATABASE}'
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 DATABASE_CONNECT_OPTIONS = {}

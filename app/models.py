@@ -16,7 +16,7 @@ class Call(db.Model):
     number_target = db.Column(db.String(13), nullable=False)
     timestamp_start_call = db.Column(db.String(30), nullable=False)
     timestamp_end_call = db.Column(db.String(30), nullable=False)
-    cost_call = db.Column(db.String(8), nullable=False)
+    cost_call = db.Column(db.Integer, nullable=False)
 
     def __repr__(self):
         return '<Call {}>'.format(self.id)

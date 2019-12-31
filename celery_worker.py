@@ -36,11 +36,11 @@ def check_files_in_dir():
                     count_minutes = (dt_object_timestamp_end_call - dt_object_timestamp_start_call).seconds / 60
 
                     if type_connect == 'GSM':
-                        result_cost_call = count_minutes * rate_gsm_for_minute
+                        result_cost_call = int(count_minutes * rate_gsm_for_minute)
                     elif type_connect == 'CDMA':
-                        result_cost_call = count_minutes * rate_cdma_for_minute
+                        result_cost_call = int(count_minutes * rate_cdma_for_minute)
                     elif type_connect == 'LTE':
-                        result_cost_call = count_minutes * rate_lte_for_minute
+                        result_cost_call = int(count_minutes * rate_lte_for_minute)
                     else:
                         result_cost_call = 0
 
